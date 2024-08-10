@@ -1,0 +1,6 @@
+torch
+midiutil
+pydub
+librosa
+numpy
+pretty_midi
