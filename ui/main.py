@@ -1,4 +1,18 @@
 import tkinter as tk
+from tkinter import Toplevel
+
+
+#function for pop up to verify that i got the string and button
+def showInput():
+    s = userInput.get()
+
+    popUP = Toplevel(window)
+    popUP.title("TEST")
+
+    label = tk.Label(popUP, text="The date given is {}".format(s))
+    label.pack()
+
+
 
 window=tk.Tk()
 
@@ -14,7 +28,7 @@ label1.pack()
 userInput=tk.Entry(window)
 userInput.pack()
 
-submit=tk.Button(window, text='Submit!', font=('Arial', 8))
+submit=tk.Button(window, text='Submit!', font=('Arial', 8), command=showInput)
 submit.pack(pady=10)
 
 
