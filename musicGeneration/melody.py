@@ -1,17 +1,19 @@
-getKeyForMonth= {
-    1: "C Major",
-    2: "G Major",
-    3: "D Major",
-    4: "A Major",
-    5: "E Major",
-    6: "B Major",
-    7: "F# Major",
-    8: "Db Major",
-    9: "Ab Major",
-    10: "Eb Major",
-    11: "Bb Major",
-    12: "F Major"
-}
+from musicTheory import getKeyForMonth
 
-def getKeyForMonth(month):
-    return getKeyForMonth.get(month, "Invalid Month")
+def generateMelody(birthday):
+    """
+    Generate a melody based on the user's birthday.
+
+    Parameters:
+    birthday (str): The user's birthday in YYYY-MM-DD format.
+
+    Returns:
+    str: A description of the melody.
+    """
+    month = int(birthday.split('-')[1])
+    key = getKeyForMonth(month)
+    
+    # Additional logic to generate melody based on the key
+    # ...
+    
+    return f"Generated melody in {key}"
